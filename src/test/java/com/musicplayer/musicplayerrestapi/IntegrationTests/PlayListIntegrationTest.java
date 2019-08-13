@@ -19,7 +19,6 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = RANDOM_PORT)
 public class PlayListIntegrationTest {
-
     @Autowired
     private TestRestTemplate testRestTemplate;
 
@@ -40,4 +39,5 @@ public class PlayListIntegrationTest {
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(response.getBody()).isEqualTo("saved");
     }
+
 }
